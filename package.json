@@ -1,0 +1,50 @@
+{
+  "name": "regular-loader",
+  "version": "0.1.0",
+  "keywords": [
+    "regularjs",
+    "regular",
+    "rgl",
+    "webpack",
+    "loader"
+  ],
+  "description": "webpack loader for regularjs",
+  "main": "index.js",
+  "scripts": {},
+  "maintainers": [
+    {
+      "name": "fengzilong",
+      "email": "fengzilong1992@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "es6-promise": "^3.2.1",
+    "es6-templates": "^0.2.2",
+    "fastparse": "^1.1.1",
+    "hash-sum": "^1.0.2",
+    "html-minifier": "^2.1.6",
+    "loader-utils": "^0.2.15",
+    "lru-cache": "^4.0.1",
+    "object-assign": "^4.1.0",
+    "parse5": "^2.1.5",
+    "postcss": "^5.0.21",
+    "postcss-selector-parser": "^2.1.0",
+    "source-map": "^0.5.6"
+  },
+  "peerDependencies": {
+    "regularjs": "^0.4.4",
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "file-loader": "^0.9.0",
+    "babel-runtime": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-core": "^6.10.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0"
+  },
+  "devDependencies": {}
+}
