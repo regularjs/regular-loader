@@ -2,6 +2,8 @@
 
 > webpack loader for [regularjs](https://github.com/regularjs/regular)
 
+Here is a simple example using regular-loader [check it out](https://github.com/fengzilong/regular-loader-example)
+
 ## Installation
 
 ```bash
