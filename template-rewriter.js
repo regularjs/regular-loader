@@ -29,7 +29,7 @@ module.exports = function( content ) {
 
 	var tree = [];
 	try {
-		tree = JSON.parse( content );
+		tree = JSON.parse( content.compiled );
 	} catch( e ) {}
 
 	if( scoped ) {
@@ -42,6 +42,12 @@ module.exports = function( content ) {
 		} );
 	}
 
-	// previous loaders didn't add module.exports for template, handle it here
-	return 'module.exports = ' + JSON.stringify( tree );
+	var root = content.root;
+	var data = content.data;
+
+	// use `module.exports` to export
+	return 'module.exports = ' + JSON.stringify( tree ).replace(/"(xxxHTMLLINKxxx[0-9\.]+xxx)"/g, function(total, match) {
+		if(!data[match]) return total;
+		return 'require(\'' + loaderUtils.urlToRequest(data[match], root) + '\')';
+	});
 };

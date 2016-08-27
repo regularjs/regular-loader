@@ -95,8 +95,9 @@ module.exports = function(content) {
 		content = content;
 	}
 
-	return content.replace(/xxxHTMLLINKxxx[0-9\.]+xxx/g, function(match) {
-		if(!data[match]) return match;
-		return '" + require(' + JSON.stringify(loaderUtils.urlToRequest(data[match], root)) + ') + "';
-	});
+	return {
+		html: content,
+		data: data,
+		root: root
+	};
 }

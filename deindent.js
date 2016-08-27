@@ -1,3 +1,7 @@
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Evan You @yyx990803
+*/
 var splitRE = /\r?\n/g
 var emptyRE = /^\s*$/
 var needFixRE = /^(\r?\n)*[\t\s]/
