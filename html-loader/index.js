@@ -2,7 +2,6 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-var htmlMinifier = require("html-minifier");
 var attrParse = require("./attributesParser");
 var loaderUtils = require("loader-utils");
 var url = require("url");
@@ -65,29 +64,6 @@ module.exports = function(content) {
 	});
 	content.reverse();
 	content = content.join("");
-	if(typeof config.minimize === "boolean" ? config.minimize : this.minimize) {
-		var minimizeOptions = assign({}, config);
-
-		[
-			"removeComments",
-			"removeCommentsFromCDATA",
-			"removeCDATASectionsFromCDATA",
-			"collapseWhitespace",
-			"conservativeCollapse",
-			"removeAttributeQuotes",
-			"useShortDoctype",
-			"keepClosingSlash",
-			"removeScriptTypeAttributes",
-			"removeStyleLinkTypeAttributes",
-			"caseSensitive"
-		].forEach(function(name) {
-			if(typeof minimizeOptions[name] === "undefined") {
-				minimizeOptions[name] = true;
-			}
-		});
-
-		content = htmlMinifier.minify(content, minimizeOptions);
-	}
 
 	if(config.interpolate) {
 		content = compile('`' + content + '`').code;
