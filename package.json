@@ -9,7 +9,7 @@
     "loader"
   ],
   "description": "webpack loader for regularjs",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {},
   "maintainers": [
     {
