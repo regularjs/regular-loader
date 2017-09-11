@@ -1,0 +1,26 @@
+<template>
+	<div class="foo">foo</div>
+</template>
+
+<script>
+	export default {
+		config() {}
+	}
+</script>
+
+<style lang="mcss">
+	$color = #fff;
+	.foo {
+		color: $color;
+
+		.inner {
+			display: flex;
+		}
+	}
+</style>
+
+<style>
+	.bar {
+		width: 100px;
+	}
+</style>

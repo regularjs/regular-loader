@@ -1,0 +1,15 @@
+<template>
+	<div class="foo">foo</div>
+</template>
+
+<script>
+	export default {
+		config() {}
+	}
+</script>
+
+<style scoped>
+	.foo {
+		background-color: #fff;
+	}
+</style>
