@@ -4,8 +4,6 @@
 [![npm package][npm-package-image]][npm-package-url]
 [![license][license-image]][license-url]
 
-> webpack loader for [regularjs](https://github.com/regularjs/regular)
-
 Here is a simple example using regular-loader [check it out](https://github.com/fengzilong/regular-loader-example)
 
 ## Installation
@@ -44,68 +42,6 @@ module.exports = {
 	]
 };
 ```
-
-index.js
-
-```js
-import App from './app.rgl';
-new App().$inject( document.body );
-```
-
-app.rgl
-
-```html
-<style>
-	html {
-		background-color: #F2F2F2;
-	}
-</style>
-
-<style lang="mcss" scoped>
-	.outter {
-		.inner {
-			color: #000;
-		}
-	}
-</style>
-
-<template>
-	<div class="outter">
-		<div class="inner">RegularJs is Awesome <Button text="get started"></Button></div>
-	</div>
-</template>
-
-<script>
-	import Button from './button.rgl';
-
-	// export options here
-	export default {
-		// shorthand for registering components in current component scope
-		components: {
-			'Button': Button,
-		}
-	}
-</script>
-```
-
-button.rgl
-
-```html
-<template>
-	<button>{ text }</button>
-</template>
-
-<script>
-	import Regular from 'regularjs';
-
-	// or export component constructor here
-	export default Regular.extend({
-		// ...
-	});
-</script>
-```
-
-Try it out!
 
 ## Related
 
