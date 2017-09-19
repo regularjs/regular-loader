@@ -20,26 +20,26 @@ webpack.config.js
 var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 
 module.exports = {
-	// ...
-	entry: './index.js',
-	module: {
-		loaders: [
-			{
-				test: /\.rgl$/,
-				loader: 'regular'
-			}
-		]
-	},
-	regular: {
-		loaders: {
-			css: ExtractTextPlugin.extract( 'css' ),
-			mcss: ExtractTextPlugin.extract( 'css!mcss' )
-		}
-	},
-	plugins: [
-		// ...
-		new ExtractTextPlugin( 'app.css' )
-	]
+    // ...
+    entry: './index.js',
+    module: {
+        loaders: [
+            {
+                test: /\.rgl$/,
+                loader: 'regular'
+            }
+        ]
+    },
+    regular: {
+        loaders: {
+            css: ExtractTextPlugin.extract( 'css' ),
+            mcss: ExtractTextPlugin.extract( 'css!mcss' )
+        }
+    },
+    plugins: [
+        // ...
+        new ExtractTextPlugin( 'app.css' )
+    ]
 };
 ```
 
