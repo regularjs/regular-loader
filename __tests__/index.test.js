@@ -11,7 +11,7 @@ function cwd( ...segs ) {
 	return path.resolve( __dirname, ...segs )
 }
 
-function bundle( entry ) {
+function bundle( entry, options = {} ) {
 	const basename = path.basename( entry, '.rgl' )
 
 	const extractStyle = new ExtractTextPlugin( `${ basename }.css` )
@@ -39,13 +39,13 @@ function bundle( entry ) {
 		resolve: {
 			extensions: [ '', '.js', '.rgl' ]
 		},
-		regular: {
+		regular: Object.assign( {
 			loaders: {
 				css: extractStyle.extract( 'css' ),
 				less: extractStyle.extract( 'css!less' ),
 				mcss: extractStyle.extract( 'css!mcss' ),
 			}
-		},
+		}, options ),
 		plugins: [
 			extractStyle,
 			new FriendlyErrorsWebpackPlugin( { clearConsole: false } ),
@@ -119,5 +119,12 @@ test( 'css-preprocessor', async function ( t ) {
 
 test( 'multiple-css', async function ( t ) {
 	const [ js, css ] = await bundle( 'multiple-css.rgl' )
+	t.snapshot( [ js, css ] )
+} )
+
+test( 'preserveWhitespace', async function ( t ) {
+	const [ js, css ] = await bundle( 'preserve-whitespace.rgl', {
+		preserveWhitespace: false
+	} )
 	t.snapshot( [ js, css ] )
 } )
