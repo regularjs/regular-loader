@@ -51,11 +51,11 @@ module.exports = {
 
 - [vue-loader](https://github.com/vuejs/vue-loader)
 
-[build-status-image]: https://img.shields.io/circleci/project/regularjs/regular-loader/master.svg?style=flat-square
+[build-status-image]: https://img.shields.io/circleci/project/regularjs/regular-loader/master.svg?style=for-the-badge
 [build-status-url]: https://circleci.com/gh/regularjs/regular-loader
 
-[npm-package-image]: https://img.shields.io/npm/v/regular-loader.svg?style=flat-square
+[npm-package-image]: https://img.shields.io/npm/v/regular-loader.svg?style=for-the-badge
 [npm-package-url]: https://www.npmjs.org/package/regular-loader
 
-[license-image]: https://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
+[license-image]: https://img.shields.io/badge/license-MIT-000000.svg?style=for-the-badge
 [license-url]: LICENSE

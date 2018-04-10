@@ -1,0 +1,27 @@
+<template>
+	<div class="foo" on-click={ this.onClick($event) }>foo</div>
+
+		{#if foo} bar
+		  {/if}
+
+{#list items as item}
+	<div>
+		<span>
+			<i> { item } </i>
+		</span>
+	</div>
+{/list}
+
+	<pre>
+
+		some text
+		<span>a b</span>
+
+	</pre>
+</template>
+
+<script>
+	export default {
+		config() {}
+	}
+</script>

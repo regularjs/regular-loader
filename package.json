@@ -32,6 +32,7 @@
     "es6-templates": "^0.2.2",
     "fastparse": "^1.1.1",
     "hash-sum": "^1.0.2",
+    "html-minifier": "^3.5.6",
     "loader-utils": "^0.2.15",
     "lru-cache": "^4.0.1",
     "object-assign": "^4.1.0",
@@ -65,7 +66,7 @@
     "less-loader": "^2.2.3",
     "mcss": "^0.5.1",
     "mcss-loader": "^1.0.1",
-    "regularjs": "^0.6.0-beta.6",
+    "regularjs": "0.6.0-beta.6",
     "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
     "webpack": "^1.13.1"
