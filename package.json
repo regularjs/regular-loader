@@ -13,11 +13,28 @@
   "scripts": {
     "test": "npm run lint && npm run ava",
     "ava": "ava __tests__/**/*.test.js",
-    "update-snapshot": "npm run ava -- -u",
-    "lint": "eslint lib --quiet"
+    "snapshot": "npm run ava -- -u",
+    "lint": "eslint lib --quiet",
+    "format": "prettier-eslint --list-different --write \"lib/**/*.js\""
+  },
+  "lint-staged": {
+    "lib/**/*.js": [
+      "eslint --fix --quiet",
+      "git add"
+    ]
   },
   "eslintConfig": {
-    "extends": "mo"
+    "extends": "mo",
+    "rules": {
+      "semi": [
+        "error",
+        "never"
+      ],
+      "indent": [
+        "error",
+        2
+      ]
+    }
   },
   "maintainers": [
     {
@@ -64,8 +81,10 @@
     "fs-extra": "^4.0.1",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
+    "lint-staged": "^7.0.4",
     "mcss": "^0.5.1",
     "mcss-loader": "^1.0.1",
+    "prettier-eslint-cli": "^4.7.1",
     "regularjs": "0.6.0-beta.6",
     "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
