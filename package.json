@@ -15,7 +15,8 @@
     "ava": "ava __tests__/**/*.test.js",
     "snapshot": "npm run ava -- -u",
     "lint": "eslint lib --quiet",
-    "format": "prettier-eslint --list-different --write \"lib/**/*.js\""
+    "format": "prettier-eslint --list-different --write \"lib/**/*.js\"",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "lib/**/*.js": [
