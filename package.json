@@ -11,10 +11,10 @@
   "description": "webpack loader for regularjs",
   "main": "lib/index.js",
   "scripts": {
-    "test": "npm run lint && npm run ava",
+    "test": "eslint lib --quiet && npm run ava",
     "ava": "rm -rf __tests__/dist && ava __tests__/**/*.test.js --serial",
     "snapshot": "rm -rf __tests__/__snapshots__ && npm run ava -- -u",
-    "lint": "eslint lib --quiet",
+    "lint": "eslint lib --fix --quiet",
     "format": "prettier-eslint --list-different --write \"lib/**/*.js\"",
     "precommit": "lint-staged"
   },
@@ -45,7 +45,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "^6.3.6",
     "es6-promise": "^3.2.1",
     "es6-templates": "^0.2.2",
     "fastparse": "^1.1.1",
@@ -60,14 +59,9 @@
     "source-map": "^0.5.6"
   },
   "peerDependencies": {
-    "babel-core": "^6.10.4",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-runtime": "^6.9.0",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-runtime": "^6.0.0",
     "css-loader": "*",
-    "regularjs": "*",
-    "style-loader": "*"
+    "style-loader": "*",
+    "regularjs": "*"
   },
   "devDependencies": {
     "ava": "^0.25.0",
