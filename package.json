@@ -45,7 +45,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "^6.3.6",
     "es6-promise": "^3.2.1",
     "es6-templates": "^0.2.2",
     "fastparse": "^1.1.1",
