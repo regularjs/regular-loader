@@ -12,7 +12,7 @@
 # for webpack 2
 # WIP
 # for webpack 1
-npm install --save-dev extract-text-webpack-plugin@0.1.5
+npm install --save-dev regular-loader@0.1.5
 ```
 
 ## Example
