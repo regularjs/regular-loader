@@ -8,19 +8,10 @@
 	}
 </script>
 
-<style lang="mcss">
-	$color = #fff;
-	.foo {
-		color: $color;
+<style lang="less">
+	@color: #eee;
 
-		.inner {
-			display: flex;
-		}
-	}
-</style>
-
-<style>
-	.bar {
-		width: 100px;
+	.css-preprocessor {
+		color: @color;
 	}
 </style>

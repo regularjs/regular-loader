@@ -9,7 +9,7 @@
 </script>
 
 <style scoped>
-	.foo {
+	.scoped-css {
 		background-color: #fff;
 	}
 </style>

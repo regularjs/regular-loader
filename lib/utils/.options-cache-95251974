@@ -1,0 +1,1 @@
+{"loaders":{"less":[{"loader":"/Users/zilong/Projects/regular-loader/node_modules/_extract-text-webpack-plugin@2.1.2@extract-text-webpack-plugin/loader.js","options":{"id":3,"omit":0,"remove":true}},{"loader":"css-loader"},{"loader":"less-loader"}]},"threadMode":true}

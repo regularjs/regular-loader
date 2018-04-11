@@ -9,13 +9,13 @@
 </script>
 
 <style>
-	html {
+	.multiple-css1 {
 		background-color: #000;
 	}
 </style>
 
-<style scoped>
-	.foo {
+<style>
+	.multiple-css2 {
 		background-color: #fff;
 	}
 </style>
