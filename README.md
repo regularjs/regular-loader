@@ -4,15 +4,18 @@
 [![npm package][npm-package-image]][npm-package-url]
 [![license][license-image]][license-url]
 
-Here is a simple example using regular-loader [check it out](https://github.com/fengzilong/regular-loader-example)
+
 
 ## Installation
 
 ```bash
-$ npm i regular-loader -D
+# for webpack 2
+# WIP
+# for webpack 1
+npm install --save-dev extract-text-webpack-plugin@0.1.5
 ```
 
-## Usage
+## Example
 
 webpack.config.js
 
@@ -23,22 +26,31 @@ module.exports = {
     // ...
     entry: './index.js',
     module: {
-        loaders: [
-            {
-                test: /\.rgl$/,
-                loader: 'regular'
-            }
-        ]
-    },
-    regular: {
-        loaders: {
-            css: ExtractTextPlugin.extract( 'css' ),
-            mcss: ExtractTextPlugin.extract( 'css!mcss' )
-        }
+      rules: [{
+        test: /\.rgl$/,
+        use: {
+          loader: 'regular-loader',
+          options: {
+            loaders: {
+              css: ExtractTextPlugin.extract( {
+                use: 'css-loader',
+                fallback: 'style-loader',
+              } ),
+              less: ExtractTextPlugin.extract( {
+                use: [
+                  'css-loader',
+                  'less-loader'
+                ],
+                fallback: 'style-loader',
+              } ),
+            },
+            preserveWhitespace: false,
+          }
+        },
+      }]
     },
     plugins: [
-        // ...
-        new ExtractTextPlugin( 'app.css' )
+      new ExtractTextPlugin( 'app.css' )
     ]
 };
 ```
