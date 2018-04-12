@@ -24,16 +24,7 @@ function bundle( entry, options = {} ) {
 				use: {
 					loader: require.resolve( '../lib' ),
 					options: Object.assign( {
-						loaders: {
-							css: ExtractTextPlugin.extract( {
-								use: [ 'css-loader' ],
-								fallback: 'style-loader',
-							} ),
-							less: ExtractTextPlugin.extract( {
-								use: [ 'css-loader', 'less-loader' ],
-								fallback: 'style-loader',
-							} ),
-						},
+						extractCSS: true
 					}, options )
 				},
 			}]
