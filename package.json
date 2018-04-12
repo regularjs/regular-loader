@@ -12,7 +12,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "eslint lib --quiet && npm run ava",
-    "ava": "rm -rf __tests__/dist && ava __tests__/**/*.test.js --serial",
+    "ava": "ava __tests__/**/*.test.js",
     "snapshot": "rm -rf __tests__/__snapshots__ && npm run ava -- -u",
     "lint": "eslint lib --fix --quiet",
     "format": "prettier-eslint --list-different --write \"lib/**/*.js\"",
@@ -45,23 +45,22 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "es6-promise": "^3.2.1",
     "es6-templates": "^0.2.2",
     "fastparse": "^1.1.1",
     "hash-sum": "^1.0.2",
     "html-minifier": "^3.5.6",
     "loader-utils": "^1.1.0",
     "lru-cache": "^4.0.1",
-    "object-assign": "^4.1.0",
     "parse5": "^2.1.5",
     "postcss": "^5.0.21",
+    "postcss-load-config": "^1.2.0",
     "postcss-selector-parser": "^2.1.0",
     "source-map": "^0.5.6"
   },
   "peerDependencies": {
     "css-loader": "*",
-    "style-loader": "*",
-    "regularjs": "*"
+    "regularjs": "*",
+    "style-loader": "*"
   },
   "devDependencies": {
     "ava": "^0.25.0",
