@@ -51,7 +51,6 @@
     "html-minifier": "^3.5.6",
     "loader-utils": "^1.1.0",
     "lru-cache": "^4.0.1",
-    "object-assign": "^4.1.0",
     "parse5": "^2.1.5",
     "postcss": "^5.0.21",
     "postcss-selector-parser": "^2.1.0",
