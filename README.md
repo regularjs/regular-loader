@@ -20,11 +20,10 @@ npm install --save-dev regular-loader@0.1.5
 webpack.config.js
 
 ```js
-var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 
 module.exports = {
     // ...
-    entry: './index.js',
     module: {
       rules: [{
         test: /\.rgl$/,
@@ -43,8 +42,7 @@ module.exports = {
                 ],
                 fallback: 'style-loader',
               } ),
-            },
-            preserveWhitespace: false,
+            }
           }
         },
       }]
