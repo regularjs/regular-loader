@@ -45,7 +45,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "es6-promise": "^3.2.1",
     "es6-templates": "^0.2.2",
     "fastparse": "^1.1.1",
     "hash-sum": "^1.0.2",
