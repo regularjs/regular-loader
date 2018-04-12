@@ -2,7 +2,6 @@ const path = require( 'path' )
 const webpack = require( 'webpack' )
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' )
 const FriendlyErrorsWebpackPlugin = require( 'friendly-errors-webpack-plugin' )
-const rm = require( 'rimraf' )
 const fs = require( 'fs-extra' )
 const regularLoader = require( '../lib' )
 

@@ -12,7 +12,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "eslint lib --quiet && npm run ava",
-    "ava": "rm -rf __tests__/dist && ava __tests__/**/*.test.js --serial",
+    "ava": "ava __tests__/**/*.test.js",
     "snapshot": "rm -rf __tests__/__snapshots__ && npm run ava -- -u",
     "lint": "eslint lib --fix --quiet",
     "format": "prettier-eslint --list-different --write \"lib/**/*.js\"",
