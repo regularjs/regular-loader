@@ -1,0 +1,10 @@
+<template>
+<div>b.rgl</div>
+{#inc this.$body}
+</template>
+
+<script>
+export default {
+
+}
+</script>

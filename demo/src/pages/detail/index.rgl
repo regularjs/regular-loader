@@ -1,0 +1,45 @@
+<template>
+  <div>
+    <A>
+      <div>slot in a!!!</div>
+      <B>
+        <div>slot in b</div>
+      </B>
+    </A>
+    {#list items as item}
+      <B></B>
+    {/list}
+  </div>
+</template>
+
+<script>
+  import A from '@/src/pages/detail/a.rgl'
+  import B from './b.rgl'
+
+  export default {
+    components: {
+      A: A,
+      B: B,
+    },
+    config() {
+      console.log( 'config' )
+    }
+  }
+</script>
+
+<style lang="less" scoped>
+  .a {
+    font-size: 19px;
+
+    .b {
+      color: #ddd;
+    }
+  }
+</style>
+
+<style>
+  div {
+    color: blue;
+    display: flex;
+  }
+</style>

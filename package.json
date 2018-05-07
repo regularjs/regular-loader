@@ -1,12 +1,15 @@
 {
-  "name": "regular-loader",
-  "version": "0.1.5",
+  "name": "mpregular-loader",
+  "version": "0.0.14",
   "keywords": [
     "regularjs",
     "regular",
     "rgl",
     "webpack",
     "loader"
+  ],
+  "files": [
+    "lib"
   ],
   "description": "webpack loader for regularjs",
   "main": "lib/index.js",
@@ -45,16 +48,22 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-generator": "^6.26.1",
+    "babelon": "^1.0.5",
     "es6-templates": "^0.2.2",
     "fastparse": "^1.1.1",
     "hash-sum": "^1.0.2",
     "html-minifier": "^3.5.6",
     "loader-utils": "^1.1.0",
     "lru-cache": "^4.0.1",
+    "mpregular-template-compiler": "^0.0.11",
+    "nanoid": "^1.0.2",
     "parse5": "^2.1.5",
     "postcss": "^5.0.21",
     "postcss-load-config": "^1.2.0",
     "postcss-selector-parser": "^2.1.0",
+    "resolve": "^1.7.1",
     "source-map": "^0.5.6"
   },
   "peerDependencies": {

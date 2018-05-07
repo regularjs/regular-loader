@@ -1,5 +1,6 @@
+.DS_Store
 node_modules
 npm-debug.log
 /__tests__/dist
-/demo
+/demo/dist
 /lib/utils/.options-cache-*
