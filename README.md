@@ -9,13 +9,15 @@
 ## Installation
 
 ```bash
-# for webpack 2
-# WIP
+# for webpack 2/3/4
+npm i regular-loader@next -D
 # for webpack 1
-npm install --save-dev regular-loader@0.1.5
+npm install regular-loader@^0.1.5 -D
 ```
 
 ## Example
+
+### For webpack 2/3
 
 webpack.config.js
 
@@ -37,6 +39,34 @@ module.exports = {
     },
     plugins: [
       new ExtractTextPlugin( 'app.css' )
+    ]
+};
+```
+
+### For webpack 4
+
+webpack.config.js
+
+```js
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+
+module.exports = {
+    // ...
+    module: {
+      rules: [{
+        test: /\.rgl$/,
+        use: {
+          loader: 'regular-loader',
+          options: {
+            extractCSS: true
+          }
+        },
+      }]
+    },
+    plugins: [
+      new MiniCssExtractPlugin( {
+          filename: 'app.css',
+      } )
     ]
 };
 ```
