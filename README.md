@@ -11,8 +11,11 @@
 ```bash
 # for webpack 2/3/4
 npm i regular-loader@next -D
+```
+
+```bash
 # for webpack 1
-npm install regular-loader@^0.1.5 -D
+npm i regular-loader@^0.1.5 -D
 ```
 
 ## Example
