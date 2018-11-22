@@ -1,0 +1,22 @@
+<template>
+  <div class="root">
+    deep selectors
+  </div>
+</template>
+
+<script>
+</script>
+
+<style scoped>
+.root {
+  color: red;
+}
+
+.root .child {
+  color: yellow;
+}
+
+.root >>> .child {
+  color: blue;
+}
+</style>
