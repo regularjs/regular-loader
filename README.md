@@ -4,8 +4,6 @@
 [![npm package][npm-package-image]][npm-package-url]
 [![license][license-image]][license-url]
 
-
-
 ## Installation
 
 ```bash
@@ -82,7 +80,7 @@ module.exports = {
 
 - [vue-loader](https://github.com/vuejs/vue-loader)
 
-[build-status-image]: https://img.shields.io/circleci/project/regularjs/regular-loader/master.svg?style=for-the-badge
+[build-status-image]: https://img.shields.io/circleci/project/regularjs/regular-loader/1.x-release.svg?style=for-the-badge
 [build-status-url]: https://circleci.com/gh/regularjs/regular-loader
 
 [npm-package-image]: https://img.shields.io/npm/v/regular-loader.svg?style=for-the-badge
