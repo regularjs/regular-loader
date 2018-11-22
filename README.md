@@ -2,6 +2,7 @@
 
 [![build status][build-status-image]][build-status-url]
 [![npm package][npm-package-image]][npm-package-url]
+[![npm package next][npm-package-image-next]][npm-package-url]
 [![license][license-image]][license-url]
 
 ## Installation
@@ -85,6 +86,8 @@ module.exports = {
 
 [npm-package-image]: https://img.shields.io/npm/v/regular-loader.svg?style=for-the-badge
 [npm-package-url]: https://www.npmjs.org/package/regular-loader
+
+[npm-package-image-next]: https://img.shields.io/npm/v/regular-loader/next.svg?style=for-the-badge
 
 [license-image]: https://img.shields.io/badge/license-MIT-000000.svg?style=for-the-badge
 [license-url]: LICENSE
