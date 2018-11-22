@@ -27,3 +27,7 @@ test.serial( 'preserve-whitespace', async t => {
 test.serial( 'scoped-css', async t => {
 	t.snapshot( await bundle( 'scoped-css.rgl' ) )
 } )
+
+test.serial( 'deep-selectors', async t => {
+	t.snapshot( await bundle( 'deep-selectors.rgl' ) )
+} )
