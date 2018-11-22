@@ -9,7 +9,7 @@
 
 ```bash
 # for webpack 2/3/4
-npm i regular-loader@next -D
+npm i regular-loader@^1.0.0 -D
 ```
 
 ```bash
